@@ -6,6 +6,8 @@ export interface Settings {
   weightIncrement: number;
   keepAwake: boolean;
   restSound: boolean;
+  lastBackupAt: number;
+  installHintDismissed: boolean;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -13,6 +15,8 @@ export const DEFAULT_SETTINGS: Settings = {
   weightIncrement: 2.5,
   keepAwake: true,
   restSound: true,
+  lastBackupAt: 0,
+  installHintDismissed: false,
 };
 
 export async function getSettings(): Promise<Settings> {

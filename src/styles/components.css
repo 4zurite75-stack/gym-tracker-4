@@ -2007,3 +2007,61 @@ input[type='datetime-local'].input {
 .cmp-slider__tag--r {
   right: 10px;
 }
+
+/* ---------- Ajustes ---------- */
+.group__row:disabled {
+  opacity: 0.6;
+}
+.install-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: calc(100% - var(--gutter) * 2);
+  margin: 0 var(--gutter) 4px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(255, 107, 44, 0.2), rgba(255, 107, 44, 0.06));
+  border: 1px solid rgba(255, 107, 44, 0.3);
+  color: var(--accent);
+  text-align: left;
+}
+.install-banner span {
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+}
+.install-banner small {
+  color: var(--text-2);
+  font-size: 13px;
+}
+.backup-warn {
+  margin: 0 var(--gutter) 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255, 214, 10, 0.1);
+  color: #ffd60a;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.version {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 24px;
+}
+.install {
+  padding: 4px var(--gutter) 24px;
+}
+.install ol {
+  margin: 0;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+.install__icon {
+  vertical-align: -3px;
+  color: var(--blue);
+}

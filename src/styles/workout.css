@@ -660,3 +660,47 @@ html.rest-flash .workout::after {
   background: linear-gradient(135deg, #ffb340, var(--accent));
   color: #fff;
 }
+
+.set-head span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+/* iPhone SE, mini y pantallas estrechas */
+@media (max-width: 380px) {
+  .set-head,
+  .set-row {
+    grid-template-columns: 30px minmax(0, 1fr) 58px 46px 40px 40px;
+    gap: 4px;
+    padding: 0 12px;
+  }
+  .set-prev {
+    font-size: 12px;
+  }
+  .set-head {
+    font-size: 10px;
+    letter-spacing: 0.02em;
+  }
+  .set-check {
+    width: 40px;
+  }
+  .cell {
+    font-size: 16px;
+  }
+}
+@media (max-height: 700px) {
+  .keypad__grid {
+    grid-auto-rows: 44px;
+    gap: 5px;
+  }
+  .key:not(.key--fn) {
+    font-size: 22px;
+  }
+  .restbar.is-open .restbar__inner {
+    padding: 6px 12px;
+  }
+  .restbar__time {
+    font-size: 22px;
+  }
+}

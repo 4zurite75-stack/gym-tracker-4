@@ -300,3 +300,13 @@ p {
 .tabbar__item svg {
   transition: transform 0.12s;
 }
+
+.edge-swipe {
+  position: absolute;
+  z-index: 6;
+  left: 0;
+  top: calc(var(--safe-top) + var(--nav-h));
+  bottom: calc(var(--tabbar-h) + var(--safe-bottom));
+  width: 18px;
+  touch-action: none;
+}

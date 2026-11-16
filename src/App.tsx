@@ -19,7 +19,16 @@ export function App() {
   const settings = useSettings();
 
   useEffect(() => {
-    void useWorkout.getState().load();
+    void useWorkout
+      .getState()
+      .load()
+      .finally(() => {
+        // Retira la pantalla de carga cuando los datos ya están listos.
+        const el = document.getElementById('launch');
+        if (!el) return;
+        requestAnimationFrame(() => el.classList.add('is-hidden'));
+        setTimeout(() => el.remove(), 450);
+      });
   }, []);
 
   useEffect(() => {

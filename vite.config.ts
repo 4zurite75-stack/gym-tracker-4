@@ -7,12 +7,15 @@ const base = process.env.BASE ?? '/';
 
 export default defineConfig({
   base,
+  define: {
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version ?? '1.0.0'),
+  },
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: false,
-      includeAssets: ['icons/*.png', 'icons/*.svg', 'splash/*.png'],
+      includeAssets: ['icons/*.png', 'icons/*.svg'],
       manifest: {
         name: 'Progreso — Registro de gimnasio',
         short_name: 'Progreso',
@@ -33,6 +36,8 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
+        // iOS solo lee las pantallas de arranque al instalar: no hace falta precargarlas.
+        globIgnores: ['splash/**'],
         navigateFallback: 'index.html',
         cleanupOutdatedCaches: true,
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
