@@ -656,3 +656,7 @@ html.rest-flash .workout::after {
   color: var(--text-2);
   background: var(--surface-4);
 }
+.set-check.is-on.is-pr {
+  background: linear-gradient(135deg, #ffb340, var(--accent));
+  color: #fff;
+}
