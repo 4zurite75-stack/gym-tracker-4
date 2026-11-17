@@ -3,8 +3,8 @@ dist
 dev-dist
 *.log
 .DS_Store
-test-results
-screens
-capturas
+/test-results
+/screens
+/capturas
 *.zip
 *.bundle
